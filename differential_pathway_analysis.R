@@ -124,8 +124,8 @@ run_example = function()
 
 		
 		#
-	  # Load example Parkinson's disease case/control gene expression dataset from GEO
-	  #
+	 	# Load example Parkinson's disease case/control gene expression dataset from GEO
+	 	#
 		#    Dataset GSE8397: L. B. Moran et al., Neurogenetics, 2006, SN + frontal gyrus, post mortem,	PD (29), healthy (18)
 		#    Array platform: Affymetrix HG-U133A
 		#
@@ -244,7 +244,7 @@ run_example = function()
 		# dim(moran_symb)
 
 	  
-	  # Extract pathway activities
+	  	# Extract pathway activities
 		moran_path = summarized_pathway_activity(moran_symb, gsets=pathlst, type="median", minsize = 10)			
 		print(moran_path[1:5,1:5])
 
