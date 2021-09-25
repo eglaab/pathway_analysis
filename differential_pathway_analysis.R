@@ -267,7 +267,7 @@ run_example = function()
 		
 		# show model evluation based on out-of-bag samples
 		print(rfmod_zhang)
-		# OOB estimate of  error rate: 10.26%
+		# OOB estimate of error rate: 10.26%
 		
 }
 
