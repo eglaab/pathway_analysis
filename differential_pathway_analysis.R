@@ -263,11 +263,14 @@ run_example = function()
 		set.seed(1234) 
 		
 		# Build Random Forest sample classification model for Zhang et al. data using 250 decision trees		
-		rfmod_zhang = randomForest(t(moran_path), factor(moran_outcomefilt), ntree=250, keep.forest=TRUE)
+		rfmod_moran= randomForest(t(moran_path), factor(moran_outcomefilt), ntree=250, keep.forest=TRUE)
 		
 		# show model evluation based on out-of-bag samples
-		print(rfmod_zhang)
-		# OOB estimate of error rate: 10.26%
+		print(rfmod_moran)
+		# OOB estimate of  error rate: 10.26%
+		
+		# which pathways were most informative for the prediction (multivariate feature selction):
+		print(head(rfmod_moran$importance[order(rfmod_moran$importance, decreasing=T),]))		
 		
 }
 
